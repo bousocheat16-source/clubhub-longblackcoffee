@@ -3,7 +3,7 @@
 ## Members and roles
 | Member               | GitHub                    | Role (Sprint 1) | Shared hat         	        |
 |----------------------|---------------------------|-----------------|----------------------------------|
-|Socheat Bou           | @bousocheat16-source      | Product Owner   | Business Analyst/Code Reviewer   |
+|Bou Socheat           | @bousocheat16-source      | Product Owner   | Business Analyst/Code Reviewer   |
 |Be Sovanntheavathana  | @Vathanabe                | Scrum Master    | UX Designer/Tester 	        |           
 |Leng Choulita         | @Choulita                 | Developer       | UX Designer/Tester 	        |    
 |Sarim Sereyboth       | @Sereyboth-cmd            | Developer       | DevOps Engineer (Sketcher)       |   
