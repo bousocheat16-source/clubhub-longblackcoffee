@@ -8,10 +8,9 @@ Cambodia. Course project, Introduction to Software Engineering.
 |-----------------------|----------------------|------------------|
 | Bou Socheat           | @bousocheat16-source | Product Owner    |
 | Be Sovanntheavathana  | @Vathanabe           | Scrum Master     |
-| -------------         | @Choulita            | Developer        |
-| -------------         | @Sereyboth-cmd       | Developer        |
-| -------------         | @Lyfang519           | Developer        |
-<!-- each member adds their own row in their own commit -->
+| Leng Choulita         | @Choulita            | Developer        |
+| Sarim Sereyboth       | @Sereyboth-cmd       | Developer        |
+| Sron Lyfang           | @Lyfang519           | Developer        |
 
 ## Repository layout
 | Path | Content |
