@@ -1,5 +1,5 @@
-# Failure case analysis · <case> (v1.0, 2026-__-__)
-Authors: <member per section>
+# Failure case analysis · <Mars Climate Orbiter> (v1.0, 2026-10-20)
+Authors: Bou Socheat, Leng Choulita
 
 ## 1. Context
 ## 2. Timeline
