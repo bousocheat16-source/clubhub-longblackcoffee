@@ -6,7 +6,7 @@ Cambodia. Course project, Introduction to Software Engineering.
 ## Team
 | Member                | GitHub               | Role (Sprint 1)  |
 |-----------------------|----------------------|------------------|
-| Bou Socheat           | @bousocheat16-source | Product Owner    |
+|                       | @bousocheat16-source | Product Owner    |
 | Be Sovanntheavathana  | @Vathanabe           | Scrum Master     |
 | Leng Choulita         | @Choulita            | Developer        |
 | Sarim Sereyboth       | @Sereyboth-cmd       | Developer        |
