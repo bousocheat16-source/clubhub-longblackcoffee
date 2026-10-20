@@ -1,4 +1,4 @@
-# Team charter · Zhe Bajie (v1.0, 2026-10-14)
+# Team charter · longblackcoffee (v1.0, 2026-10-14)
 
 ## Members and roles
 | Member               | GitHub                    | Role (Sprint 1) | Shared hat         	        |
