@@ -22,8 +22,8 @@ flowchart TD
   A["Ground software outputs lbf-s, not N-s as the SIS required"] --> B["Navigation software reads the data as N-s"]
   B --> C["Thruster firings underestimated by 4.45x"]
   C --> D["Error accumulates overcruise"]
-  D --> E["Orbiter arrives far too low(57 km vs 226 km planned)"]
-  E --> F["Spacecraft lost at orbitinsertion"]
+  D --> E["Orbiter arrives far too low (57 km vs 226 km planned)"]
+  E --> F["Spacecraft lost at orbit insertion"]
 ```
 
 ## 4. Root causes
