@@ -15,14 +15,15 @@ for strict unit standardization, rigorous software validation, and cross-organiz
 |------|-------|
 
 ## 3. What failed
-<one paragraph>
+The Mars Climate Orbiter was lost because of a units mismatch in its ground software. The Software Interface Specification required thruster impulse data in newton-seconds, but the file was produced in pound-force seconds, so the navigation software underestimated each thruster firing by a factor of 4.45. The firings were also far more frequent than the navigators expected, because the spacecraft’s solar array was asymmetrical, so the error added up during the cruise and the real trajectory ended up much lower than the estimated one. As a result, the spacecraft lost contact during orbit insertion on 23 September 1999 (NASA MIB, 1999, pp. 7, 13, 16).
 
 ```mermaid
 flowchart TD
-  A["root cause"] --> B["..."]
-  B --> C["..."]
-  C --> D["..."]
-  D --> E["impact"]
+  A["Ground software output in pound-force seconds, not newton-seconds as the SIS required"] --> B["Navigation software reads the AMD file as newton-seconds"]
+  B --> C["Each thruster firing underestimated by a factor of 4.45"]
+  C --> D["Error accumulates overcruise; trajectory estimate drifts"]
+  D --> E["Orbiter reaches Mars on a much lower path (about 57 km periapsis vs 226 km planned)"]
+  E --> F["Spacecraft lost during orbit insertion"]
 ```
 
 ## 4. Root causes
