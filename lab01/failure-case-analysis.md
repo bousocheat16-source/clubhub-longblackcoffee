@@ -36,9 +36,15 @@ flowchart TD
 ```
 
 ## 4. Root causes
-| # | Root cause | Type | Essential difficulty | Why |
-|---|------------|------|----------------------|-----|
-| R1 |           | technical / process / organisational | | |
+| # | Root cause             | Type                       | Essential difficulty                                 | Why                                                                       |              
+|---|------------------------|----------------------------|------------------------------------------------------|---------------------------------------------------------------------------|
+| R1| Technical root cause   | Unit mismatch/ Human error | ground software supplied by Lockheed Martin produced | The trajectory sofware calculation value expected in SI unit per Software |
+|   |                        |                            | results in English unit instead of SI unit.          | interface Specification,causing calculation incorrect by a factor of 4.45.|
+| R2| Orbital insertion      | Physical root cause        | The trajectory error sent the spacecraft down to an  | Because of the accumulated calculations errors the intense atmospheric and|                           
+|   |                        |                            | altitude of 57 km instead of the targeted ~226 km.   | heat instanly destroy the orbiter.                                        | 
+| R3| Organizational/Systemic| Process & Oversight Failure| The operations team ignored internal warning signs   | A "faster, better, cheaper" mission mindset led to inadequate systems     |
+|   |                        |                            | from navigators and failed to conduct end-to-end     | engineering verification, poor communication between teams, and a lack of |
+|   |                        |                            | Testing.                                             | formalized procedures to catch the unit mismatch                          |
 
 ## 5. Practices that would have prevented or limited it
 | Root cause | Practice | Chapter |
@@ -50,3 +56,4 @@ flowchart TD
 
 ## 7. Sources
 1. <author or organisation, title, year, URL> (primary)
+1. 
