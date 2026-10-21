@@ -19,11 +19,11 @@ The Mars Climate Orbiter was lost because of a units mismatch in its ground soft
 
 ```mermaid
 flowchart TD
-  A["Ground software output in pound-force seconds, not newton-seconds as the SIS required"] --> B["Navigation software reads the AMD file as newton-seconds"]
-  B --> C["Each thruster firing underestimated by a factor of 4.45"]
-  C --> D["Error accumulates overcruise; trajectory estimate drifts"]
-  D --> E["Orbiter reaches Mars on a much lower path (about 57 km periapsis vs 226 km planned)"]
-  E --> F["Spacecraft lost during orbit insertion"]
+  A["Ground software outputs lbf-s, not N-s as the SIS required"] --> B["Navigation software reads the data as N-s"]
+  B --> C["Thruster firings underestimated by 4.45x"]
+  C --> D["Error accumulates overcruise"]
+  D --> E["Orbiter arrives far too low(57 km vs 226 km planned)"]
+  E --> F["Spacecraft lost at orbitinsertion"]
 ```
 
 ## 4. Root causes
