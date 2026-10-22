@@ -40,3 +40,4 @@ To prevent this over the next four weeks, we will list every business rule in th
 - (Leng Choulita, signed) : I will ask in the GitHub Issue before changing a rule that someone else owns, instead of fixing it quietly myself.
 - (Sron Lyfang, signed)  :  I will tell the team in the GitHub Issue as soon as I notice the same rule written in two places, instead of waiting for the review.
 - (Bou Socheat, signed) : I will keep in check on the GitHub, while also maintaining proper curriculum.
+- (Sarim Sereyboth, signed) : I will post an update in the GitHub Issue as soon as I modify any project file, instead of letting it go unnoticed.
