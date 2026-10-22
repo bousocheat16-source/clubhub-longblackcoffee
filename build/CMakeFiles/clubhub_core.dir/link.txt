@@ -1,2 +1,0 @@
-/usr/bin/ar qc libclubhub_core.a CMakeFiles/clubhub_core.dir/src/banner.cpp.o
-/usr/bin/ranlib libclubhub_core.a
