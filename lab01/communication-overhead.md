@@ -41,3 +41,4 @@ To prevent this over the next four weeks, we will list every business rule in th
 - (Sron Lyfang, signed)  :  I will tell the team in the GitHub Issue as soon as I notice the same rule written in two places, instead of waiting for the review.
 - (Bou Socheat, signed) : I will keep in check on the GitHub, while also maintaining proper curriculum.
 - (Sarim Sereyboth, signed) : I will post an update in the GitHub Issue as soon as I modify any project file, instead of letting it go unnoticed.
+- (Be Sovanntheavathana, signed) : I will update the README business rules list immediately whenever a new rule is agreed upon or modified in our issue discussions.
