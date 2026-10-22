@@ -38,3 +38,4 @@ The essential difficulty we expect to hit first is invisibility. Since software 
 To prevent this over the next four weeks, we will list every business rule in the README in one plain sentence and keep each rule in exactly one function, with a named owner and a unit test once tests exist. Our early warning sign is the same rule appearing in two files, and reviewers will ask for it to be reused.
 
 - (Leng Choulita, signed) : I will ask in the GitHub Issue before changing a rule that someone else owns, instead of fixing it quietly myself.
+- (Sron Lyfang, singed)  :  I will tell the team in the GitHub Issue as soon as I notice the same rule written in two places, instead of waiting for the review.
