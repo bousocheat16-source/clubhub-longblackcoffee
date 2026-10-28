@@ -14,4 +14,4 @@ std::string banner(std::string_view teamName) {
     return out;
 }
 
-}  // namespace clubhub
+} 
