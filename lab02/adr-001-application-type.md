@@ -9,7 +9,10 @@ Version 1.0 · 2026-__-__ · Status: Proposed | Accepted (date) · Deciders: __
 | Administrators (ITC Administration) | Laptop or desktop (assumed) | Office | Stable (assumed) | Rarely: reports and oversight | Clean, correct analytics reports |
 
 ## Options
-A. Native apps (Android + iOS)   B. PWA for students and organisers, the same web app opened on desktop by administrators   C. Responsive web app (no install, no offline support)   D. Cross-platform app (one codebase, e.g. Flutter or React Native)
+A. Native apps (Android + iOS)
+B. PWA for students and organisers, the same web app opened on desktop by administrators
+C. Responsive web app (no install, no offline support)
+D. Cross-platform app (one codebase, e.g. Flutter or React Native)
 
 ## Weighted comparison (score 1-5 x weight)
 
