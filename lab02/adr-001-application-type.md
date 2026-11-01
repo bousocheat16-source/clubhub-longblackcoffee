@@ -18,7 +18,7 @@ A. Native apps (Android + iOS)   B. PWA for students and organisers, the same we
 | Reach (_)                             | | | | | |
 | Offline check-in at the door (_)      | | | | | |
 | Reminders (_)                         | | | | | |
-| __ for administrators (_)             | | | | | |
+| Device flexibility for administrators (_)             | | | | | |
 | **Total**                             | | = | = | = | = |
 
 Deal-breaker check: __
