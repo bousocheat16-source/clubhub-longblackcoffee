@@ -25,13 +25,23 @@ D. Cross-platform app (one codebase, e.g. Flutter or React Native)
 | Device flexibility for administrators (1) | 2-3 admins who use whatever device is at hand (office PC, laptop, phone), but only occasionally | 2x1=2 | 5x1=5 | 5x1=5 | 3x1=3 |
 | **Total** | max possible = 5 x 12 = 60 | 3+9+15+10+2 = **39** | 12+15+12+6+5 = **50** | 15+15+3+4+5 = **42** | 6+9+12+8+3 = **38** |
 
-Deal-breaker check: __
+Deal-breaker check: Deal-breaker check: Option C (Responsive web app) fails the absolute deal-breaker because it cannot handle offline check-ins if campus Wi-Fi drops at the door. Option B (PWA) 
+successfully passes because Service Workers can store a cached attendee roster locally on the phone.
 
 ## Decision
+We choose **Option B: PWA for students and organisers, the same web app opened on desktop by administrators**. This satisfies our constraint for an offline roster while keeping our codebase unified.
+
 ## Consequences
-+ __
-+ __
-- __
-- __
++ One web-based codebase for students, organisers, and administrators drastically reduces engineering overhead for our 5-person team.
++ Service Workers allow gate controllers to run QR ticket lookups completely offline.
+- iPhone users will only receive schedule reminders by push notification after manually installing the PWA; e-mail remain our fallback channel.
+- Organisers must connect to local Wi-Fi to synchronize the fresh event manifest right before heading to disconnected door zones.
+
 ## Rejected options
-## How the front ends reach the C++ core
+* **A. Native apps:** Building three separate front ends (iOS, Android, desktop) is impossible for a 5-person team in one semester.
+* **C. Responsive web app:** Offers zero offline capability, failing the door check-in constraint immediately when networks drop.
+* **D. Cross-platform app:** Requires configuration overhead for mobile stores and a higher learning curve than straightforward web development.
+
+## How the front ends reach the C++ core The PWA and web dashboards will route actions to our application data logic via an **HTTP API (REST)**. While the production setup places the core behind a web 
+framework layout, our current university lab constraints will utilize CLI calls to interact with the compiled C++ components directly.
+
