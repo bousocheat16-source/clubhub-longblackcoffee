@@ -25,7 +25,7 @@ D. Cross-platform app (one codebase, e.g. Flutter or React Native)
 | Device flexibility for administrators (1) | 2-3 admins who use whatever device is at hand (office PC, laptop, phone), but only occasionally | 2x1=2 | 5x1=5 | 5x1=5 | 3x1=3 |
 | **Total** | max possible = 5 x 12 = 60 | 3+9+15+10+2 = **39** | 12+15+12+6+5 = **50** | 15+15+3+4+5 = **42** | 6+9+12+8+3 = **38** |
 
-Deal-breaker check: Deal-breaker check: Option C (Responsive web app) fails the absolute deal-breaker because it cannot handle offline check-ins if campus Wi-Fi drops at the door. Option B (PWA) 
+Deal-breaker check: Option C (Responsive web app) fails the absolute deal-breaker because it cannot handle offline check-ins if campus Wi-Fi drops at the door. Option B (PWA) 
 successfully passes because Service Workers can store a cached attendee roster locally on the phone.
 
 ## Decision
