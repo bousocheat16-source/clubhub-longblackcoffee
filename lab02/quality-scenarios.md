@@ -18,4 +18,5 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 ## Priorities
 | Scenario | Business importance | Technical risk | Protects | First? |
 |----------|---------------------|----------------|----------|--------|
-| QAS-01   |                     |                |          |        |
+| QAS-01   | Important               |  Medium             | Data and Integrity logs         | Yes       |
+
