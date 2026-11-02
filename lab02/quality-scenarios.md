@@ -30,4 +30,6 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 | Scenario | Business importance | Technical risk | Protects | First? |
 |----------|---------------------|----------------|----------|--------|
 | QAS-01   | Important               |  Medium             | Data and Integrity logs         | Yes       |
+| QAS-02   |                         |                     |                                 |           |
+| QAS-03   | Moderate                | Low                 | Registration flow for students  |           |
 
