@@ -22,7 +22,7 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 | Environment      | Registration has just opened; on their own phone over campus Wi-Fi; no tutorial, nobody to ask.       |
 | Artifact         | The registration pages: event list, event page, confirmation screen.                                       |
 | Response         | They find the event, register, and can tell straight away whether they got a seat or are on the waiting list.        |
-| Response measure | Around 60 seconds from start to finish; at least 9 out of 10 test students manage it first try without asking for help.      |
+| Response measure | >= 5 taps from home to registration complete, >= 60 seconds from start to finish; at least 9 out of 10 test students manage it first try without asking for help.      |
 
 ## QAS-06 · Portability · written by __
 
