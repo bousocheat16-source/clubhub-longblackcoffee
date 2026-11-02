@@ -42,6 +42,6 @@ We choose **Option B: PWA for students and organisers, the same web app opened o
 * **C. Responsive web app:** Offers zero offline capability, failing the door check-in constraint immediately when networks drop.
 * **D. Cross-platform app:** Requires configuration overhead for mobile stores and a higher learning curve than straightforward web development.
 
-## How the front ends reach the C++ core The PWA and web dashboards will route actions to our application data logic via an **HTTP API (REST)**. While the production setup places the core behind a web 
-framework layout, our current university lab constraints will utilize CLI calls to interact with the compiled C++ components directly.
+## How the front ends reach the C++ core
+The PWA and web dashboards will route actions to our application data logic via an **HTTP API (REST)**. While the production setup places the core behind a web framework layout, our current university lab constraints will utilize CLI calls to interact with the compiled C++ components directly.
 
