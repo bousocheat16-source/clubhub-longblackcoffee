@@ -4,12 +4,12 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 ## QAS-01 · Availability · written by @bousocheat16-source
 | Part             | Content |
 |------------------|---------|
-| Source           | Server Infrastructure        |
-| Stimulus         | Main server or data storage crashes unexpectedly        |
-| Environment      | App operation during busy days (eg. event registerations...)        |
-| Artifact         | ITC Club Hub core and environment system       |
-| Response         | The system logs the error, attempts to automatically restart, and displays a user-friendly "System In Maintenance" message rather than crashing the user's client.        |
-| Response measure | System will only go down for less than 15 minutes, and all data will be restored 100%        |
+| Source           | System overload (sudden traffic spike)       |
+| Stimulus         | the Club Hub main process crashes due to memory exhaustion       |
+| Environment      | start of the semester club fair, heavy concurrent access        |
+| Artifact         | Club Hub core service and file-based data store       |
+| Response         | watchdog service detects the crash and restarts the process; client UI displays "Reconnecting, please wait..."; partially completed registrations are safely rolled back       |
+| Response measure  |service restored in < 5 minutes; monthly availability >= 99.5 %; 0 corrupted club or user records      |
 
 ## QAS-02 · Performance of check-in at the door · written by __
 ...
@@ -29,7 +29,7 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 ## Priorities
 | Scenario | Business importance | Technical risk | Protects | First? |
 |----------|---------------------|----------------|----------|--------|
-| QAS-01   | Important               |  Medium             | Data and Integrity logs         | Yes       |
+| QAS-01   | Important               |  Medium             | Data/Time Logs       | Yes       |
 | QAS-02   |                         |                     |                                 |           |
-| QAS-03   | Moderate                | Low                 | Registration flow for students  |           |
+| QAS-03   | Moderate                | Low                 | Registration flow for students  | No        |
 
