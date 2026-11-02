@@ -33,3 +33,12 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 | QAS-02   |                         |                     |                                 |           |
 | QAS-03   | Moderate                | Low                 | Registration flow for students  |           |
 
+## QAS-05 · Modifiability · written by @lyfang519
+| Part             | Content                                        |
+|------------------|------------------------------------------------|
+| Source           | a developer of the team                        |
+| Stimulus         | adds the waiting list (a should feature): a full event puts new registations in status|
+| Enviroment       | Design time, after Sprint1, core already tested |
+| Artifact         | RegistrationService, Registration(include/clubhub/)|
+| Response         | Change made is the core only, the user interface gains the waitlist display, existing behaviour unchanged |
+| Response measure | done in less than 2 person-day, less than 4 files changed under core modules, 0 changes in UI/entry-point files |
