@@ -1,5 +1,5 @@
 # Lab-02 · Quality attribute scenarios for ITC Club Hub
-Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
+Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): 2026-11-03
 
 ## QAS-01 · Availability · written by @bousocheat16-source
 | Part             | Content |
@@ -20,6 +20,7 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 | Artifact         | The check-in handler component inside the registration service |
 | Response         | Students status updates to CheckedIn, a green confirmation tick is displayed on the organizer's screen, and duplicate scans are automatically rejected with a clear warning message |
 | Response measure | 95% of check-in requests are processed and confirmed within <= 1.0 seconds; sustained throughput >= 20 check-ins per minute per door (200 / 10 min = 20/min) |
+
 
 ## QAS-03 · Usability · written by @Choulita
 | Part             | Content                                                    |
@@ -42,15 +43,6 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 | Response         | The system detects the abnormal rate of sequential requests, blocks the malicious user's account session access token, refuses to reveal unauthorized query parameters, logs the unauthorized exposure attempt to an audit trail, and flags the account for administrator review. |
 | Response Measure | 100% of unauthorized data requests are blocked; 0 student phone numbers or private data details are leaked to the client; the malicious account token is completely revoked within <= 1.5 seconds of detection; the system administrator receives a security notification alert in <= 5 minutes. |
 
-## QAS-06 · Portability · written by __
-
-## Priorities
-| Scenario | Business importance | Technical risk | Protects | First? |
-|----------|---------------------|----------------|----------|--------|
-| QAS-01   | High               |  Moderate             | Data/Time Logs       | Yes       |
-| QAS-02   |                         |                     |                                 |           |
-| QAS-03   | Moderate                | Low                 | Registration flow for students  | No        |
-
 ## QAS-05 · Modifiability · written by @lyfang519
 | Part             | Content                                        |
 |------------------|------------------------------------------------|
@@ -60,3 +52,24 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 | Artifact         | RegistrationService, Registration(include/clubhub/)|
 | Response         | Change made is the core only, the user interface gains the waitlist display, existing behaviour unchanged |
 | Response measure | done in less than 2 person-day, less than 4 files changed under core modules, 0 changes in UI/entry-point files |
+
+## QAS-06 · Portability · written by @bousocheat16-source
+| Part             | Content |
+|------------------|---------|
+| Source           | ITC Administrator & Development Team     |
+| Stimulus         | the Club Hub main process needs to compile the app and test run on a different OS      |
+| Environment      | Switching from WindowsOS to MacOS or Ubuntu       |
+| Artifact         | Club Hub C++ codebase and CMake building system       |
+| Response         | Code can run natively on C++ codebase using CMake without needing any specific platform for source code rewrite       |
+| Response measure  |successful build with 0 compilation errors;
+             100% feature parity achieved on the new OS in < 2 hours      |
+
+## Priorities
+| Scenario | Business importance | Technical risk | Protects | First? |
+|----------|---------------------|----------------|----------|--------|
+| QAS-01   | High    |  Moderate   | Data/Time Logs       | Yes       |
+| QAS-02   | High   | High    |  Offline Attendance    | Yes          |
+| QAS-03   | Moderate    | Low   | Registration flow for students  | No  |
+| QAS-04   | High | Moderate | Data Privacy | Yes |
+| QAS-05   | Moderate | Moderate | Developer Timeline | No | 
+| QAS-06   | Low | Low | Operating System (OS) Flexibility | No |
