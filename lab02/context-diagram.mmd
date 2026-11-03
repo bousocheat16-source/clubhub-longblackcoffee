@@ -1,0 +1,31 @@
+flowchart LR
+    %% Central System
+    CH((Club Hub))
+
+    %% Human Roles (Standard rounded nodes)
+    Student([Student])
+    Leader([Club Leader])
+    Organiser([Organiser])
+    Admin([Administrator])
+
+    %% External Systems (Different shape: [[ ]] for subroutine/external)
+    EmailService[[E-mail Service]]
+    ITCDirectory[[ITC Student Directory]]
+    %% Data Flows (12 arrows)
+    Student -->|club search, schedule viewing| CH
+    Student -->|registration, cancellation| CH
+    CH -->|schedule notifications, QR ticket| Student
+    
+    Leader -->|club info, event broadcast| CH
+    CH -->|member roster, attendance logs| Leader
+    
+    Organiser -->|QR check-in scan data| CH
+    CH -->|scan confirmation, room availability| Organiser
+    
+    Admin -->|oversight queries| CH
+    CH -->|monthly report| Admin
+    
+    CH -->|student ID lookup| ITCDirectory
+    ITCDirectory -->|name and e-mail| CH
+    
+    CH -->|confirmation, reminder| EmailService
