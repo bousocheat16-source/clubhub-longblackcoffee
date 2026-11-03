@@ -24,6 +24,17 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 | Response         | They find the event, register, and can tell straight away whether they got a seat or are on the waiting list.        |
 | Response measure | >= 5 taps from home to registration complete, >= 60 seconds from start to finish; at least 9 out of 10 test students manage it first try without asking for help.      |
 
+## QAS-04 · Security · written by @Sereyboth-cmd
+
+| Part             | Content |
+|------------------|---------|
+| Source           | An authenticated but unauthorized ITC student operating an external automated script. |
+| Stimulus         | The user attempts to scrape the full database of student phone numbers and attendance records by sending sequential, rapid API requests to the backend server endpoints. |
+| Environment      | Normal operation, online during a high-traffic registration window on a mobile web connection. |
+| Artifact         | The backend data store, specifically the `AttendanceRecord` and `StudentProfile` database entities containing Personally Identifiable Information (PII) (Full Names, ITC Student ID Numbers, and Phone Numbers). |
+| Response         | The system detects the abnormal rate of sequential requests, blocks the malicious user's account session access token, refuses to reveal unauthorized query parameters, logs the unauthorized exposure attempt to an audit trail, and flags the account for administrator review. |
+| Response Measure | 100% of unauthorized data requests are blocked; 0 student phone numbers or private data details are leaked to the client; the malicious account token is completely revoked within <= 1.5 seconds of detection; the system administrator receives a security notification alert in <= 5 minutes. |
+
 ## QAS-06 · Portability · written by __
 
 ## Priorities
