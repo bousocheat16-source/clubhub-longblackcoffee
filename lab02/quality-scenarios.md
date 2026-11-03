@@ -11,8 +11,15 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 | Response         | watchdog service detects the crash and restarts the process; client UI displays "Reconnecting, please wait..."; partially completed registrations are safely rolled back       |
 | Response measure  |service restored in < 5 minutes; monthly availability >= 99.5 %; 0 corrupted club or user records      |
 
-## QAS-02 · Performance of check-in at the door · written by __
-...
+## QAS-02 · Performance of check-in at the door · written by @Vathana
+| Part             | Content |
+|------------------|---------|
+| Source           | Club event organizer at the venue entrance |
+| Stimulus         | Scans a student's QR code or digital ID to check them into the event |
+| Environment      | Friday 18:00, peak door queue with 200 student arrivals in 10 minutes, single door entry point over venue Wi-Fi at 1 Mbps |
+| Artifact         | The check-in handler component inside the registration service |
+| Response         | Students status updates to CheckedIn, a green confirmation tick is displayed on the organizer's screen, and duplicate scans are automatically rejected with a clear warning message |
+| Response measure | 95% of check-in requests are processed and confirmed within <= 1.0 seconds; sustained throughput >= 20 check-ins per minute per door (200 / 10 min = 20/min) |
 
 ## QAS-03 · Usability · written by @Choulita
 | Part             | Content                                                    |
