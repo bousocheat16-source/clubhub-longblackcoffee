@@ -11,7 +11,7 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): __
 | Response         | watchdog service detects the crash and restarts the process; client UI displays "Reconnecting, please wait..."; partially completed registrations are safely rolled back       |
 | Response measure  |service restored in < 5 minutes; monthly availability >= 99.5 %; 0 corrupted club or user records      |
 
-## QAS-02 · Performance of check-in at the door · written by @Vathana
+## QAS-02 · Performance of check-in at the door · written by @Vathanabe
 | Part             | Content |
 |------------------|---------|
 | Source           | Club event organizer at the venue entrance |
