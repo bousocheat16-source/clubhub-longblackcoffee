@@ -67,7 +67,7 @@ Version 1.0 · 2026-11-02 · Reviewed by (Scrum Master): 2026-11-03
 ## Priorities
 | Scenario | Business importance | Technical risk | Protects | First? |
 |----------|---------------------|----------------|----------|--------|
-| QAS-01   | High    |  Moderate   | Data/Time Logs       | Yes       |
+| QAS-01   | High    |  Moderate   | Data/Time Logs       | NO      |
 | QAS-02   | High   | High    |  Offline Attendance    | Yes          |
 | QAS-03   | Moderate    | Low   | Registration flow for students  | No  |
 | QAS-04   | High | Moderate | Data Privacy | Yes |
