@@ -11,7 +11,6 @@ Event::Event(std::string id, std::string title, TimePoint start,
              std::string location, int capacity)
     : id_{std::move(id)}, title_{std::move(title)}, start_{start},
       location_{std::move(location)}, capacity_{capacity} {
-    
     if (id_.empty() || title_.empty()) {
         throw std::invalid_argument{"id and title must not be empty"};
     }
@@ -25,15 +24,29 @@ TimePoint parseTimePoint(const std::string& text) {
     std::istringstream in{text};
     int y{}, mo{}, d{}, h{}, mi{};
     char dash1{}, dash2{}, colon{};
-    in >> y >> dash1 >> mo >> dash2 >> d >> h >> colon >> mi;
     
-    const year_month_day date{year{y}, month{static_cast<unsigned>(mo)},
-                              day{static_cast<unsigned>(d)}};
+    // Read the date part first
+    if (!(in >> y >> dash1 >> mo >> dash2 >> d)) {
+        throw std::invalid_argument{"bad date-time '" + text + "'"};
+    }
     
-    // Check if stream successfully parsed everything with no trash
-    bool eof = (in >> std::ws).eof();
+    // Consume standard white spaces separating date and time strings cleanly
+    in >> std::ws;
     
-    if (in.fail() || !eof || dash1 != '-' || dash2 != '-' || colon != ':' ||
+    // Read the remaining hour-minute layout tokens
+    if (!(in >> h >> colon >> mi)) {
+        throw std::invalid_argument{"bad date-time '" + text + "'"};
+    }
+    
+    char extra;
+    bool explicit_check = false;
+    if (in >> extra) {
+        explicit_check = true;
+    }
+
+    const year_month_day date{year{y}, month{static_cast<unsigned>(mo)}, day{static_cast<unsigned>(d)}};
+    
+    if (explicit_check || dash1 != '-' || dash2 != '-' || colon != ':' ||
         !date.ok() || h < 0 || h > 23 || mi < 0 || mi > 59) {
         throw std::invalid_argument{"bad date-time '" + text + "'"};
     }
@@ -56,3 +69,4 @@ std::string formatTimePoint(TimePoint t) {
 }
 
 } // namespace clubhub
+

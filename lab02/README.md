@@ -1,41 +1,50 @@
-# Lab-02 · ITC Club Hub (v1.0, 2026-11-03)
+# Lab 02: Architectural Design, Core Data Structures, and CLI (03-11-2026)
 
-## (a) Files of this lab
+## 1. File Table
+List of files created or modified in lab 02:
 
-| File | Description | Main Author |
-|------|-------------|-------------|
-| `lab02/context-diagram.mmd` & `.png` | Context diagram showing stakeholders and external systems | @bousocheat16-source |
-| `lab02/architecture.mmd` & `.png` | 3-tier architecture diagram mapping components to folders | @bousocheat16-source |
-| `lab02/quality-scenarios.md` | Six quality attribute scenarios (Availability, Performance, etc.) | @bousocheat16-source |
-| `include/clubhub/event.hpp` | Core Event class interface and time parsing definitions | @bousocheat16-source |
-| `include/clubhub/event_csv.hpp` | CSV loading interface and error struct definitions | @Sereyboth-cmd |
-| `src/event.cpp` | Event constructor validation and time parsing implementation | @bousocheat16-source |
-| `src/event_csv.cpp` | CSV parsing and error handling implementation | @bousocheat16-source |
-| `src/cli/main.cpp` | Command-line interface for the `list-events` command | @Choulita |
-| `CMakeLists.txt` | CMake build configuration for core library and executable | @Sereyboth-cmd|
-| `data/events.csv` | Sample event data including one intentionally invalid row | @Choulita |
-| `lab02/README.md` | Documentation, file manifest, and embedded diagrams | @bousocheat16-source |
+| File Path | Description | Author |
+| :--- | :--- | :--- |
+| `lab02/app-classification.md` | Application type classification and rationale | @bousocheat16-source |
+| `lab02/app-quadrant.mmd` | Mermaid quadrant chart for application classification | @bousocheat16-source |
+| `lab02/adr-001-application-type.md` | Architectural Decision Record for chosen application type | @Vathanabe |
+| `lab02/quality-scenarios.md` | Quality attribute scenarios and architectural tactics | @Vathanabe |
+| `lab02/context-diagram.mmd` | C4 Context diagram source (Mermaid) | @bousocheat16-source |
+| `lab02/context-diagram.png` | Exported C4 Context diagram graphic | @bousocheat16-source|
+| `lab02/architecture.mmd` | C4 Component/Container diagram source (Mermaid) | @bousocheat16-source |
+| `lab02/architecture.png` | Exported C4 architecture diagram graphic | @bousocheat16-source |
+| `lab02/event.hpp` | Event entity core data structure declaration | @Sereyboth-cmd |
+| `lab02/event_csv.hpp` | CSV parser header for Event entities | @Choulita |
+| `lab02/event.cpp` | Event entity implementation | @Choulita |
+| `lab02/event_csv.cpp` | CSV parser implementation for Event entities | @Sereyboth-cmd |
+| `lab02/main.cpp` | List-events command-line interface driver | @Choulita |
+| `lab02/events.csv` | Sample CSV data set for event execution | @sereyboth-cmd |
+| `lab02/README.md` | Lab 02 summary, traceability, and changelog | @lyfang519 |
 
-## (b) Inputs reused
+---
+
+## 2. Inputs Reused Table
+Lab 01 artifacts carried forward into Lab 02:
 
 | Reused File Path | Description | Git Commit Hash |
 | :--- | :--- | :--- |
 | `lab01/team-charter.md` | Team communication agreements, norms, and roles | `git log -1 --format=%h -- lab01/team-charter.md` |
 | `lab01/decisions.md` | Early architectural and technical decision logs | `git log -1 --format=%h -- lab01/decisions.md` |
 
-## (c) Diagrams
+---
 
-### Context Diagram
-![Club Hub Context Diagram](context-diagram.png)
+## 3. Architecture Diagrams
 
-### Architecture Diagram
-![Club Hub Architecture Diagram](architecture.png)
+### System Context Diagram
+![C4 Context Diagram](context-diagram.png)
 
-## (d) Change log
+### Container / Component Diagram
+![Architecture Diagram](architecture.png)
 
-| Date | Version | Change | Commit By |
-|------|---------|--------|-----------|
-| 2026-11-03 | v1.0 | Event core logic, CSV loading, CLI list-events, and architecture diagrams | longblackcoffee |
+---
 
-![Club Hub Context Diagram](context-diagram.png)
-![Club Hub Architecture Diagram](architecture.png)
+## 4. Change-Log
+| Date | Version | Description | Author / Team |
+| :--- | :--- | :--- | :--- |
+| 2026-11-03 | 1.0 | Initial release of Lab 02 architecture, C4 diagrams, event core, and CLI | longblackcoffee |
+
