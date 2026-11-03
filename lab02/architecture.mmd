@@ -1,0 +1,38 @@
+flowchart TD
+    %% Define styles for clear visual distinction
+    classDef implemented fill:#d4edda,stroke:#28a745,stroke-width:2px;
+    classDef modelled fill:#f8f9fa,stroke:#6c757d,stroke-width:2px,stroke-dasharray: 5 5;
+
+    subgraph Presentation
+        CLI["C++ CLI<br/>(src/cli/)"]:::implemented
+        PWA["PWA / Web Front Ends<br/>(Modelled only)"]:::modelled
+        Mobile["Mobile Mockups<br/>(Modelled only)"]:::modelled
+    end
+
+    subgraph Logic
+        RegService["RegistrationService<br/>(include/clubhub/, src/)"]:::implemented
+        EventService["EventService<br/>(include/clubhub/, src/)"]:::implemented
+    end
+
+    subgraph Data
+        CSV["CSV Files<br/>(data/)"]:::implemented
+        DB[(Database later)]
+    end
+
+    %% External Systems
+    EmailService[[E-mail Service]]
+    ITCDirectory[[ITC Student Directory]]
+
+    %% Connections
+    CLI --> EventService
+    PWA --> RegService
+    PWA --> EventService
+    Mobile --> EventService
+
+    RegService --> CSV
+    EventService --> CSV
+    RegService -.-> DB
+    EventService -.-> DB
+
+    RegService --> ITCDirectory
+    EventService --> EmailService

@@ -1,11 +1,11 @@
 # Team charter · longblackcoffee (v1.0, 2026-10-14)
 
 ## Members and roles
-| Member               | GitHub                    | Role (Sprint 1) | Shared hat         	        |
+| Member               | GitHub                    | Role (Sprint 1) | Shared hat         	            |
 |----------------------|---------------------------|-----------------|----------------------------------|
 |Bou Socheat           | @bousocheat16-source      | Product Owner   | Business Analyst/Code Reviewer   |
-|Be Sovanntheavathana  | @Vathanabe                | Scrum Master    | UX Designer/Tester 	        |           
-|Leng Choulita         | @Choulita                 | Developer       | UX Designer/Tester 	        |    
+|Be Sovanntheavathana  | @Vathanabe                | Scrum Master    | UX Designer/Tester 	            |           
+|Leng Choulita         | @Choulita                 | Developer       | UX Designer/Tester 	            |    
 |Sarim Sereyboth       | @Sereyboth-cmd            | Developer       | DevOps Engineer (Sketcher)       |   
 |Sron Lyfang           | @Lyfang519                | Developer       | DevOps Engineer (Sketcher)       |   
 
@@ -35,7 +35,9 @@ The Product Owner stays the same all semester.
 
 ## Agreed by
 <!-- each member adds "- Name, date" in their own commit (Task 2) -->
-Bou Socheat 20/10/2026
 
-Be Sovanntheavathana 20/10/2026
-Sron Lyfang 20/10/2026
+- Bou Socheat 20/10/2026
+- Be Sovanntheavathana 20/10/2026
+- Sron Lyfang 20/10/2026
+- Leng Choulita 20/10/2026
+- Sarim Sereyboth 20/10/2026
