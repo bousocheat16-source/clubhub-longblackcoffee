@@ -1,5 +1,5 @@
 # ADR-001 · Application types for ITC Club Hub
-Version 1.0 · 2026-__-__ · Status: Proposed | Accepted (date) · Deciders: __
+Version 1.0 · 2026-04-11· Status: Proposed· Deciders: @bousocheat16-source (Product Owner) , @Vathanabe (Scrum Master)
 
 ## User groups
 | Group          | Device | Where | Connectivity | How often | Must never fail |
