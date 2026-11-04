@@ -20,7 +20,7 @@ D. Cross-platform app (one codebase, e.g. Flutter or React Native)
 |--------------------|-----------------|----------|-------|-------|------------------|
 | Cost for our team in one semester (3) | 5 people; the C++ core takes most of our time, and the front ends must be designed now and buildable later | 1x3=3 | 4x3=12 | 5x3=15 | 2x3=6 |
 | Reach (3) | Students are the main users and we reach them through Telegram channels and flyers, so no store install is a big plus | 3x3=9 | 5x3=15 | 5x3=15 | 3x3=9 |
-| Offline check-in by student ID at the door (3) | The stakeholder list asks for automated attendance logs, and the door Wi-Fi may be unreliable, so the ID lookup must work from a cached roster | 5x3=15 | 4x3=12 | 1x3=3 | 4x3=12 |
+| Offline check-in by student ID at the door (3) | The stakeholder list asks for automated attendance logs, and the door Wi-Fi may be unreliable, so the ID lookup must work from a cached roster | 5x3=15 | 4x3=12 | 0x3=0 | 4x3=12 |
 | Reminders (2) | Students need schedule notifications, but e-mail can cover a weak push | 5x2=10 | 3x2=6 | 2x2=4 | 4x2=8 |
 | Device flexibility for administrators (1) | 2-3 admins who use whatever device is at hand (office PC, laptop, phone), but only occasionally | 2x1=2 | 5x1=5 | 5x1=5 | 3x1=3 |
 | **Total** | max possible = 5 x 12 = 60 | 3+9+15+10+2 = **39** | 12+15+12+6+5 = **50** | 15+15+3+4+5 = **42** | 6+9+12+8+3 = **38** |
