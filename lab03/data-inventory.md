@@ -3,8 +3,8 @@ Version 0.1 · 2026-MM-DD · Authors: <names>
 
 | Field | Subject | Purpose | Legal basis / consent | Retention | Who can see it | Stored in | Decision |
 |-------|---------|---------|-----------------------|-----------|----------------|-----------|----------|
-| studentId | student | identify; block double registration | necessary for the service | TODO | TODO | data/students.csv | Mask for organisers: TODO reason |
-| name | student | TODO | TODO | TODO | TODO | TODO | TODO |
+| studentId | student | identify; block double registration | necessary for the service | Until account deleted | Administrator | data/students.csv | Mask for organisers: Security reason |
+| name | student | Identify the list of participant | Yes | Until administrator delete | Event organizers and user | data/event.csv | Mask for non-participant and organizer: Privacy reason |
 | phone | student | TODO | consent (opt-in) | TODO | TODO | TODO | TODO |
 | attendance | student | TODO | legitimate interest: TODO why | TODO | TODO | data/registrations.csv | TODO |
 | dateOfBirth | student | TODO: is there any? | TODO | TODO | TODO | TODO | TODO |
