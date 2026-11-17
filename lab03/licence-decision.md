@@ -16,4 +16,5 @@ Version 1.0 · 2026-11-15 · Lead: Socheat
 
 | Member | Agrees | Date |
 |--------|--------|------|
-| Vathana   | yes    | 15/11/2026 |
+| Vathana   | Yes    | 15/11/2026 |
+| Socheat   | Yes    | 17/11/2026 |
