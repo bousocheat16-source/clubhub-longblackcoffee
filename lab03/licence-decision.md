@@ -18,3 +18,4 @@ Version 1.0 · 2026-11-15 · Lead: Socheat
 |--------|--------|------|
 | Vathana   | Yes    | 15/11/2026 |
 | Socheat   | Yes    | 17/11/2026 |
+| Choulita  | Yes    | 17/11/2026 |
