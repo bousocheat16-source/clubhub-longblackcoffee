@@ -20,4 +20,4 @@ We keep your details until your account is deleted. Your club membership ends wh
 SMS reminders, email reminders and sharing your faculty and year are all off unless you turn them on. You can change or withdraw any of them at any time in My profile. Your account works without them.
 
 ## Contact
-Questions or requests to delete your data: [email address or office location].
+Questions or requests to delete your data: bousocheat16@gmail.com
