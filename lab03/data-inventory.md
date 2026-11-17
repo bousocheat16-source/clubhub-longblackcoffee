@@ -3,7 +3,7 @@ Version 0.2  · 2026-11-16 · Authors: Bou Socheat, Be Sovanntheavathana, Leng C
 
 | Field | Subject | Purpose | Legal basis / consent | Retention | Who can see it | Stored in | Decision |
 |---|---|---|---|---|---|---|---|
-| studentId | student | identify; block double registration | Necessary for the service | Until account deleted | Administrator (full ID) Student (masked) | data/students.csv |  Keep: needed to identify students and block double registration.|
+| studentId | student | identify; block double registration | Necessary for the service | Until account deleted | Administrator (full ID) organizers (masked) | data/students.csv |  Keep: needed to identify students and block double registration.|
 | name | student | Identify the list of participant | Necessary for the service | Until account deleted | Event organizers, administrator and student (own) | data/event.csv | Mask for non-participant and organizer: Privacy reason |
 | email | student | Send event registration confirmations and cancellation notices | Necessary for the service: required to deliver booking receipts | Until account deleted | Student (own), administrator | data/students.csv | Keep: primary reliable channel for transactional event confirmations. |
 | phone | student | SMS reminder 24 h before an event, only if chosen | Consent (opt-in), withdrawable in *My profile* | Deleted at once on withdrawal, otherwise 6 months after graduation | Nobody on screen; read only by the reminder sender | data/students.csv | Keep optional: SMS reaches students without mobile data, while core booking works without it. |
