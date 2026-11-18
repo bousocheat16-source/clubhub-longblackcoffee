@@ -1,4 +1,4 @@
-# Privacy notice · longblackcoffee
+# Privacy notice · ITC Club Hub
 
 ## Who we are
 Club Hub helps ITC students find club events and register for them. Team longblackcoffee builds it as a course project at the Institute of Technology of Cambodia.
