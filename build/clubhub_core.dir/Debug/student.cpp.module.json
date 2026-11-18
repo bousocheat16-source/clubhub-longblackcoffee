@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "clubhub_core.dir\\Debug\\Student.obj",
+            "outputs": [
+                "D:\\ClubHub (ISE project)\\clubhub-longblackcoffee\\build\\Debug\\clubhub_core.pdb",
+                "clubhub_core.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}

@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{979C4A41-1D34-3759-A855-DB9C87576544}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>student_privacy_test</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">student_privacy_test.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">student_privacy_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">student_privacy_test.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">student_privacy_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">student_privacy_test.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">student_privacy_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">student_privacy_test.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">student_privacy_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/_deps/googletest-src/googletest/include" /external:I "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/_deps/googletest-src/googletest"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\bin\cmake.exe -P "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/student_privacy_test_e3b0c442_Debug_discovery.cmake" -- 
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>Debug\clubhub_core.lib;lib\Debug\gtest_main.lib;lib\Debug\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/Debug/student_privacy_test.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/Debug/student_privacy_test.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/_deps/googletest-src/googletest/include" /external:I "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/_deps/googletest-src/googletest"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\bin\cmake.exe -P "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/student_privacy_test_e3b0c442_Release_discovery.cmake" -- 
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>Release\clubhub_core.lib;lib\Release\gtest_main.lib;lib\Release\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/Release/student_privacy_test.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/Release/student_privacy_test.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/_deps/googletest-src/googletest/include" /external:I "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/_deps/googletest-src/googletest"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\bin\cmake.exe -P "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/student_privacy_test_e3b0c442_MinSizeRel_discovery.cmake" -- 
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>MinSizeRel\clubhub_core.lib;lib\MinSizeRel\gtest_main.lib;lib\MinSizeRel\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/MinSizeRel/student_privacy_test.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/MinSizeRel/student_privacy_test.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/_deps/googletest-src/googletest/include" /external:I "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/_deps/googletest-src/googletest"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ClubHub (ISE project)\clubhub-longblackcoffee\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest\include;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\bin\cmake.exe -P "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/student_privacy_test_e3b0c442_RelWithDebInfo_discovery.cmake" -- 
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>RelWithDebInfo\clubhub_core.lib;lib\RelWithDebInfo\gtest_main.lib;lib\RelWithDebInfo\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/RelWithDebInfo/student_privacy_test.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/RelWithDebInfo/student_privacy_test.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\ClubHub (ISE project)\clubhub-longblackcoffee\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/ClubHub (ISE project)/clubhub-longblackcoffee/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\bin\cmake.exe "-SD:/ClubHub (ISE project)/clubhub-longblackcoffee" "-BD:/ClubHub (ISE project)/clubhub-longblackcoffee/build" --check-stamp-file "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeCXXInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeCommonLanguageInclude.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeGenericSystem.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeInitializeConfigs.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeLanguageInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeRCInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeSystemSpecificInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeSystemSpecificInitialize.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\ExternalProject\shared_internal_commands.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\FetchContent.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\FetchContent\CMakeLists.cmake.in;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\GoogleTest.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Linker\MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Linker\MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Linker\Windows-MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-Initialize.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\WindowsPaths.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeCXXCompiler.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeRCCompiler.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/ClubHub (ISE project)/clubhub-longblackcoffee/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\bin\cmake.exe "-SD:/ClubHub (ISE project)/clubhub-longblackcoffee" "-BD:/ClubHub (ISE project)/clubhub-longblackcoffee/build" --check-stamp-file "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeCXXInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeCommonLanguageInclude.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeGenericSystem.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeInitializeConfigs.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeLanguageInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeRCInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeSystemSpecificInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeSystemSpecificInitialize.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\ExternalProject\shared_internal_commands.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\FetchContent.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\FetchContent\CMakeLists.cmake.in;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\GoogleTest.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Linker\MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Linker\MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Linker\Windows-MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-Initialize.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\WindowsPaths.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeCXXCompiler.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeRCCompiler.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/ClubHub (ISE project)/clubhub-longblackcoffee/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\bin\cmake.exe "-SD:/ClubHub (ISE project)/clubhub-longblackcoffee" "-BD:/ClubHub (ISE project)/clubhub-longblackcoffee/build" --check-stamp-file "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeCXXInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeCommonLanguageInclude.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeGenericSystem.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeInitializeConfigs.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeLanguageInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeRCInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeSystemSpecificInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeSystemSpecificInitialize.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\ExternalProject\shared_internal_commands.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\FetchContent.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\FetchContent\CMakeLists.cmake.in;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\GoogleTest.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Linker\MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Linker\MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Linker\Windows-MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-Initialize.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\WindowsPaths.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeCXXCompiler.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeRCCompiler.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/ClubHub (ISE project)/clubhub-longblackcoffee/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\bin\cmake.exe "-SD:/ClubHub (ISE project)/clubhub-longblackcoffee" "-BD:/ClubHub (ISE project)/clubhub-longblackcoffee/build" --check-stamp-file "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeCXXInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeCommonLanguageInclude.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeGenericSystem.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeInitializeConfigs.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeLanguageInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeRCInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeSystemSpecificInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\CMakeSystemSpecificInitialize.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Compiler\MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\ExternalProject\shared_internal_commands.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\FetchContent.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\FetchContent\CMakeLists.cmake.in;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\GoogleTest.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Linker\MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Linker\MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Linker\Windows-MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-Initialize.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows-MSVC.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\Windows.cmake;C:\tools\cmake-4.5.0-rc1-windows-x86_64\cmake-4.5.0-rc1-windows-x86_64\share\cmake-4.5\Modules\Platform\WindowsPaths.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeCXXCompiler.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeRCCompiler.cmake;D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\4.5.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\ClubHub (ISE project)\clubhub-longblackcoffee\tests\StudentPrivacyTest.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\ZERO_CHECK.vcxproj">
+      <Project>{E1E2BE9E-4258-36C8-805E-E8609C9A721F}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\clubhub_core.vcxproj">
+      <Project>{FF4D2997-3A1D-395F-B41F-24323D271486}</Project>
+      <Name>clubhub_core</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-build\googletest\gtest.vcxproj">
+      <Project>{308D1DD8-98FC-38FF-B4EC-91C323D2B135}</Project>
+      <Name>gtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ClubHub (ISE project)\clubhub-longblackcoffee\build\_deps\googletest-build\googletest\gtest_main.vcxproj">
+      <Project>{734E41C7-C445-3679-8503-D51E35B42C96}</Project>
+      <Name>gtest_main</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

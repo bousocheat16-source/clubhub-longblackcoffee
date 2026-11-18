@@ -1,0 +1,42 @@
+{
+  "tests": 6,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "StudentPrivacy",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "RedactedHidesPersonalData",
+          "file": "D:\\ClubHub (ISE project)\\clubhub-longblackcoffee\\tests\\StudentPrivacyTest.cpp",
+          "line": 15
+        },
+        {
+          "name": "OptionalConsentsStartOff",
+          "file": "D:\\ClubHub (ISE project)\\clubhub-longblackcoffee\\tests\\StudentPrivacyTest.cpp",
+          "line": 25
+        },
+        {
+          "name": "WithdrawingSmsConsentErasesPhone",
+          "file": "D:\\ClubHub (ISE project)\\clubhub-longblackcoffee\\tests\\StudentPrivacyTest.cpp",
+          "line": 32
+        },
+        {
+          "name": "RejectsEmailWithoutAt",
+          "file": "D:\\ClubHub (ISE project)\\clubhub-longblackcoffee\\tests\\StudentPrivacyTest.cpp",
+          "line": 40
+        },
+        {
+          "name": "RejectsPhoneWithLetters",
+          "file": "D:\\ClubHub (ISE project)\\clubhub-longblackcoffee\\tests\\StudentPrivacyTest.cpp",
+          "line": 45
+        },
+        {
+          "name": "MaskIdHidesShortIdsCompletely",
+          "file": "D:\\ClubHub (ISE project)\\clubhub-longblackcoffee\\tests\\StudentPrivacyTest.cpp",
+          "line": 51
+        }
+      ]
+    }
+  ]
+}
