@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "student_privacy_test.dir\\Debug\\StudentPrivacyTest.obj",
+            "outputs": [
+                "D:\\ClubHub (ISE project)\\clubhub-longblackcoffee\\build\\student_privacy_test.dir\\Debug\\vc145.pdb",
+                "student_privacy_test.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}
