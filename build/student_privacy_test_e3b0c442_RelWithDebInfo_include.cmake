@@ -1,5 +1,0 @@
-if(EXISTS "D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/student_privacy_test_e3b0c442_RelWithDebInfo_tests.cmake")
-  include("D:/ClubHub (ISE project)/clubhub-longblackcoffee/build/student_privacy_test_e3b0c442_RelWithDebInfo_tests.cmake")
-else()
-  add_test(student_privacy_test_NOT_BUILT student_privacy_test_NOT_BUILT)
-endif()

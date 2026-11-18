@@ -1,7 +1,0 @@
-StudentPrivacy.RedactedHidesPersonalData 3 0.0054227
-StudentPrivacy.OptionalConsentsStartOff 3 0.00339227
-StudentPrivacy.WithdrawingSmsConsentErasesPhone 3 0.00477453
-StudentPrivacy.RejectsEmailWithoutAt 3 0.00354083
-StudentPrivacy.RejectsPhoneWithLetters 3 0.00308027
-StudentPrivacy.MaskIdHidesShortIdsCompletely 3 0.00369653
----
