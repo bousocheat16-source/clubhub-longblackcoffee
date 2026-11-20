@@ -1,5 +1,5 @@
 # Ethics case analyses · ITC Club Hub
-Version 1.0 · 2026-MM-DD · Leads: A = Bou Socheat, B = Leng Choulita
+Version 1.1 · 2026-11-20 · Leads: A = Bou Socheat, B = Leng Choulita
 
 ## Scenario A: "Just a small report"
 | Step | Analysis |
@@ -12,6 +12,10 @@ Version 1.0 · 2026-MM-DD · Leads: A = Bou Socheat, B = Leng Choulita
 | 6 Decision and action | (c) and (d) together. We decline the student-level report. We offer aggregated stats and the opt-in idea, and we tell the Product Owner and student affairs about the request so the decision is theirs, in writing. Nothing is built until they answer. Lead sends the message below and records the reply in the PR. |
 | 7 Reflection | The pressure here was social ("the administrator won't mind"), not technical. The report looked small, but the privacy impact was not. Next time we ask "who is this data about, and did they agree to this use?" as soon as a request involves personal data, before estimating effort. We should also have a rule that any new report touching personal data needs administrator sign-off. |
 
+**Message sent (Bou Socheat to the Robotics Club leader):** Hi <Robotics Club leader>, thanks for the idea. We can't build a report showing which students attended other clubs' events: they gave that data to take part, not to be recruited, and our privacy notice doesn't allow it. We can offer two things instead: anonymous attendance totals per event, and an opt-in "open to club invitations" setting that students switch on themselves, so you reach people who want to hear from you. We're also asking the Product Owner and student affairs to confirm this in writing. Can we talk this week? Team longblackcoffee
+
+**Preventive change:** Restrict the leader role so reports show only aggregated attendance (no student names, IDs or per-student history), require administrator sign-off for any report that uses personal data, and add a test that the leader report contains no student identifiers, issue #6 (label: ethics)
+
 ## Scenario B: "Don't mention it in the demo"
 | Step | Analysis |
 |------|----------|
@@ -23,5 +27,6 @@ Version 1.0 · 2026-MM-DD · Leads: A = Bou Socheat, B = Leng Choulita
 | 6 Decision and action | (c), and (d) if the regression tests are green before the review. The developer first raises it with the Scrum Master, saying we won't hide it. If that doesn't change the plan, the developer or lead sends the message below to the Scrum Master and Product Owner together. The Product Owner puts the defects on the review agenda. |
 | 7 Reflection | Hiding it felt easy because the defect is invisible in a demo, but that is exactly why it matters: the client trusts us to tell them. The developer's report was a good thing, not a problem. We should make it normal to report defects early, so nobody has to choose between honesty and looking good two days before a review. |
 
-**Message sent:** Hi <Scrum Master> and <Product Owner>, we found two defects before Sprint 1 review: cancellations inside the 24-hour window are accepted, and the monthly report counts cancelled registrations as attendance. We don't think we should leave this out of the demo, since the client could make decisions on wrong numbers. Our plan: list both under "known issues" with a fix date, and if the regression tests pass by Thursday, fix them before the review. Can we put this on the review agenda? <Team name>
-**Preventive change:** Add regression tests for the 24-hour cancellation rule and for the report excluding cancelled registrations, and add a "known issues" section to the review template, issue #TODO (label: ethics)
+**Message sent (Leng Choulita to Be Sovanntheavathana, Scrum Master, and Bou Socheat, Product Owner):** Hi Vathana and Socheat, we found two defects before the Sprint 1 review: cancellations inside the 24-hour window are accepted, and the monthly report counts cancelled registrations as attendance. We shouldn't leave this out of the demo, because the client could act on wrong numbers. Our plan: list both under "known issues" with a fix date, and if the regression tests pass by Thursday, fix them before the review. Can we put this on the review agenda? Team longblackcoffee
+
+**Preventive change:** Add regression tests for the 24-hour cancellation rule and for the monthly report excluding cancelled registrations, and add a "known issues" section to the review template, issue #7 (label: ethics)
