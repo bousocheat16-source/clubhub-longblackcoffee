@@ -1,37 +1,32 @@
-# Data inventory · ITC Club Hub
-Version 2.0  · 2026-11-16 · Authors: Bou Socheat, Be Sovanntheavathana, Leng Choulita, Sron Lyfang, Sarim Sereyboth
+# Ethics case analyses · ITC Club Hub
+Version 1.1 · 2026-11-20 · Leads: A = Bou Socheat, B = Leng Choulita
 
-| Field | Subject | Purpose | Legal basis / consent | Retention | Who can see it | Stored in | Decision |
-|---|---|---|---|---|---|---|---|
-| studentId | student | identify; block double registration | Necessary for the service | Until account deleted | Administrator (full ID); student (own, full); organizers (masked) | data/students.csv |  Keep: needed to identify students and block double registration.|
-| name | student | Identify the list of participant | Necessary for the service | Until account deleted | Event organizers, administrator and student (own) | data/students.csv | Keep: organisers need it for the check-in list; masked for everyone else. |
-| email | student | Send event registration confirmations and cancellation notices | Necessary for the service: required to deliver booking receipts | Until account deleted | Student (own), administrator | data/students.csv | Keep: primary reliable channel for transactional event confirmations. |
-| phone | student | SMS reminder 24 h before an event, only if chosen | Consent (opt-in), withdrawable in *My profile* | Deleted at once on withdrawal, otherwise 6 months after graduation | Nobody on screen; read only by the reminder sender | data/students.csv | Keep optional: SMS reaches students without mobile data, while core booking works without it. |
-| clubMemberships | student | Show joined clubs on *My clubs* and restrict members-only events | Necessary for the service: enforces club access rules | Kept while membership is active; deleted immediately upon leaving club | Student (own), respective club leader, administrator | data/memberships.csv | Keep: directly powers club rosters and member-only event eligibility. |
-| attendance | student | Track event check-ins for room capacity planning and semester reports | Legitimate interest: clubs need turnout totals to request rooms and budgets | Individual check-ins purged at semester end; only club totals kept | Club leader (aggregated count only), administrator | data/registrations.csv | Aggregate: club leaders only need total headcount per event, not individual histories. |
-| dateOfBirth | student | None: no feature, rule or report uses it | None | Not Collected | Nobody | Not Stored | Drop: "might be useful" is not a valid purpose. |
-| facultyAndYear | student | Tailor academic workshop announcements and report department interest | Consent (opt-in) in *My profile*, clearable anytime | Until account deleted or cleared by student | Student (own), club leader (aggregated stats only), administrator | data/students.csv | Keep optional: helps academic clubs gauge department interest without blocking registration. |
-| photo | student | None: physical student ID card check at the door already verifies identity | None | Not collected | Nobody | Not stored | Drop: storing portraits creates unnecessary biometric privacy risk for zero functional gain. |
+## Scenario A: "Just a small report"
+| Step | Analysis |
+|------|----------|
+| 1 Facts | The Robotics Club leader wants a leaders-only report showing which students attended other clubs' events, to recruit active ones. Students gave attendance data to take part in events, not to be profiled. The leader says the administrator "won't mind", but that is an assumption, not an approval. Still to find out: has the administrator been asked; would the report name students or give totals only; what does our Task 1 privacy notice say about attendance data; does ITC have a rule on sharing student data between clubs. |
+| 2 Stakeholders and harms | Students: lose control of their data, get unwanted approaches, and sensitive interests (e.g. religious or support clubs) could be exposed. Other clubs: members poached with data they collected. Robotics leader: wants to grow the club but relies on an unchecked assumption. Administrator / student affairs: accountable for student data but never reviewed this. Our team: we would be building a privacy breach. ITC: loses student trust in the app. |
+| 3 Codes, law, policy | SE Code 3.12 (respect the privacy of affected people); SE Code 2.05 (keep confidential information private). ACM 1.6 (respect privacy); ACM 1.2 (avoid harm). GDPR Art. 5(1)(b) purpose limitation, Art. 5(1)(c) data minimisation, Art. 5(1)(a) transparency (students were never told). |
+| 4 Options | (a) Build the report as asked. (b) Refuse and give no alternative. (c) Offer a privacy-friendly alternative: anonymous or aggregated attendance stats, or an opt-in "open to club invitations" setting that students switch on themselves. (d) Build nothing until the administrator decides in writing, and take the request to the Product Owner. |
+| 5 Tests | **(a)** Harm: fails, students are exposed and profiled. Rights: fails, no consent and the purpose is incompatible. Fairness: fails, one club benefits from others' data. Publicity: fails, students would be upset to see it on the news or in the student paper. **(b)** Harm: passes. Rights: passes. Fairness: partly, the leader's legitimate goal gets no help. Publicity: passes, but looks unhelpful. **(c)** Harm: passes, as long as aggregates are not small enough to identify people. Rights: passes, opt-in means consent. Fairness: passes, every club gets the same option. Publicity: passes. **(d)** Harm: passes. Rights: passes. Fairness: passes. Publicity: passes, and the right person decides. |
+| 6 Decision and action | (c) and (d) together. We decline the student-level report. We offer aggregated stats and the opt-in idea, and we tell the Product Owner and student affairs about the request so the decision is theirs, in writing. Nothing is built until they answer. Lead sends the message below and records the reply in the PR. |
+| 7 Reflection | The pressure here was social ("the administrator won't mind"), not technical. The report looked small, but the privacy impact was not. Next time we ask "who is this data about, and did they agree to this use?" as soon as a request involves personal data, before estimating effort. We should also have a rule that any new report touching personal data needs administrator sign-off. |
 
-## Copies of personal data
-| Copy | Rule |
-|---|---|
-| log files | only `redacted()` output, never name, email or phone |
-| CSV exports | Strip `phone` and `email` by default; mask `studentId` for organisers; delete temporary exports within 24 hours. |
-| test fixtures | Use synthetic dummy records only (e.g., `e20260001`, `Test Student`, `test@example.edu`); never copy real student CSVs into `tests/`. |
-| backups | Encrypt backups at rest, restrict access to administrators, and purge deleted accounts within 30 days. |
-| screenshots in docs | Use synthetic test accounts or blur all names, IDs, emails, and phone numbers before committing images. |
+**Message sent (Bou Socheat to the Robotics Club leader):** Hi <Robotics Club leader>, thanks for the idea. We can't build a report showing which students attended other clubs' events: they gave that data to take part, not to be recruited, and our privacy notice doesn't allow it. We can offer two things instead: anonymous attendance totals per event, and an opt-in "open to club invitations" setting that students switch on themselves, so you reach people who want to hear from you. We're also asking the Product Owner and student affairs to confirm this in writing. Can we talk this week? Team longblackcoffee
 
-## Lifecycle of the phone field
+**Preventive change:** Restrict the leader role so reports show only aggregated attendance (no student names, IDs or per-student history), require administrator sign-off for any report that uses personal data, and add a test that the leader report contains no student identifiers, issue #TODO (label: ethics)
 
-```mermaid
-flowchart LR
-    C["Collect<br/>only after SMS opt-in"] --> S["Store<br/>phone column, students.csv"]
-    S --> U["Use<br/>reminder sender only"]
-    U --> SH["Share<br/>SMS gateway, nobody else"]
-    SH --> D["Delete<br/>on withdrawal or 6 months after graduation"]
-```
+## Scenario B: "Don't mention it in the demo"
+| Step | Analysis |
+|------|----------|
+| 1 Facts | Two days before the Sprint 1 review, a developer found two defects: (1) cancellations inside the 24-hour window are accepted, which breaks a business rule; (2) the monthly report counts cancelled registrations as attendance. The Scrum Master wants us to hide this in the demo and fix it in Sprint 2 because "the client will never notice". Still to find out: how long the fix and its test would take; whether the demo uses real or test data; whether any real users or data are affected yet; whether the Product Owner already knows. |
+| 2 Stakeholders and harms | Client / Product Owner: decides on false information and feels deceived when they find out. Administrators: rely on wrong attendance numbers. Students: late cancellations are unfair to those who follow the rule. Organisers: get wrong attendance and capacity figures. Scrum Master: under pressure to present a clean sprint. Developer who found it: pressured to stay quiet. Team: loses credibility if the cover-up comes out later. |
+| 3 Codes, law, policy | SE Code 3 (Product), including 3.10 (testing) and 3.11 (document significant problems found); SE Code 2.07 (report problems to the client promptly); SE Code 6.12 (raise the concern with the people involved first). ACM 1.3 (be honest and trustworthy). GDPR Art. 5(1)(d) accuracy: records that count cancelled students as present are inaccurate personal data. |
+| 4 Options | (a) Stay silent as the Scrum Master asked. (b) Postpone the whole demo. (c) Demo as planned and list both defects with a fix date under "known issues". (d) Fix both defects in the two days, with a regression test, and drop another item from the demo. |
+| 5 Tests | **(a)** Harm: fails, wrong reports reach users. Rights: fails, the client has a right to know the real state of the product. Fairness: fails, students unfairly lose or keep places. Publicity: fails, the client would feel deceived. **(b)** Harm: passes. Rights: passes. Fairness: passes. Publicity: passes, but it wastes the review and protects nothing extra. **(c)** Harm: passes, defects are known and tracked. Rights: passes. Fairness: passes. Publicity: passes. **(d)** Harm: passes. Rights: passes. Fairness: passes. Publicity: passes, but only if the fix and its test really fit in two days. |
+| 6 Decision and action | (c), and (d) if the regression tests are green before the review. The developer first raises it with the Scrum Master, saying we won't hide it. If that doesn't change the plan, the developer or lead sends the message below to the Scrum Master and Product Owner together. The Product Owner puts the defects on the review agenda. |
+| 7 Reflection | Hiding it felt easy because the defect is invisible in a demo, but that is exactly why it matters: the client trusts us to tell them. The developer's report was a good thing, not a problem. We should make it normal to report defects early, so nobody has to choose between honesty and looking good two days before a review. |
 
-## Client feedback
-- TA walkthrough completed: reviewed Drop decisions (dateOfBirth, photo), Mask rules (studentId, name), and Aggregate rule (attendance). TA suggests some changes on name row.
-- TA reviewed version 2.0. All requirements are filled.
+**Message sent (Leng Choulita to Be Sovanntheavathana, Scrum Master, and Bou Socheat, Product Owner):** Hi Vathana and Socheat, we found two defects before the Sprint 1 review: cancellations inside the 24-hour window are accepted, and the monthly report counts cancelled registrations as attendance. We shouldn't leave this out of the demo, because the client could act on wrong numbers. Our plan: list both under "known issues" with a fix date, and if the regression tests pass by Thursday, fix them before the review. Can we put this on the review agenda? Team longblackcoffee
+
+**Preventive change:** Add regression tests for the 24-hour cancellation rule and for the monthly report excluding cancelled registrations, and add a "known issues" section to the review template, issue #TODO (label: ethics)
