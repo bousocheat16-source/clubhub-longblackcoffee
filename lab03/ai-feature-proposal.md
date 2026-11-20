@@ -28,10 +28,10 @@ Before building a personalised recommendation feature, a rule-based, non-persona
 | `derivedInterestProfile` (category affinity weights per opted-in user) | Recommendation scoring process (new) | **No** (new derived data) | **Yes** — new personal preference profile created solely for "Recommended for you"; requires explicit opt-in. | Store only minimal category/club affinity weights; delete within **24 hours** when the student switches recommendations off. |
 
 ### Task 1 decisions that would change
-If "Recommended for you" is approved, the following decisions in `data-inventory.md` (Version 2.0) would need to be updated[cite: 1]:
-1. **`attendance` retention and aggregation rule:** Currently, individual check-ins in `data/registrations.csv` are purged at semester end and only club totals are kept for room capacity and semester reports[cite: 1]. Supporting a 12-month attendance window for opted-in recommendations would require revising that retention/purge rule or limiting history to the active semester.
-2. **Inventory & purpose scope:** Add `derivedInterestProfile` to the data inventory and record "Recommended for you" as an optional, opt-in purpose for `studentId`, `clubMemberships`, and eligible `attendance` data[cite: 1].
-3. **Deletion & log handling:** Add a deletion rule removing `derivedInterestProfile` within 24 hours of opting out, and ensure recommendation evaluation/debug logs follow the `redacted()` rule with no `name`, `email`, or `phone`[cite: 1].
+If "Recommended for you" is approved, the following decisions in `data-inventory.md` (Version 2.0) would need to be updated
+1. **`attendance` retention and aggregation rule:** Currently, individual check-ins in `data/registrations.csv` are purged at semester end and only club totals are kept for room capacity and semester reports. Supporting a 12-month attendance window for opted-in recommendations would require revising that retention/purge rule or limiting history to the active semester.
+2. **Inventory & purpose scope:** Add `derivedInterestProfile` to the data inventory and record "Recommended for you" as an optional, opt-in purpose for `studentId`, `clubMemberships`, and eligible `attendance` data
+3. **Deletion & log handling:** Add a deletion rule removing `derivedInterestProfile` within 24 hours of opting out, and ensure recommendation evaluation/debug logs follow the `redacted()` rule with no `name`, `email`, or `phone`
 
 ---
 
