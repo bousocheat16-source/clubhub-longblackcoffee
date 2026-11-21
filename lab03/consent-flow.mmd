@@ -1,0 +1,28 @@
+flowchart LR
+    %% CLI path
+    A["clubhub register"] --> B["Enter student ID, name, email<br/>one-line notice + link to full notice"]
+    B --> C{"Email reminders?<br/>default: no"}
+    C -->|yes| D["setEmailReminders(true)"]
+    C -->|no| E{"SMS reminders?<br/>default: no"}
+    D --> E
+    E -->|yes| F["Ask phone number<br/>giveSmsConsent()"]
+    E -->|no| G{"Share faculty and year?<br/>default: no"}
+    F --> G
+    G -->|yes| H["Ask faculty and year"]
+    G -->|no| I["Account created"]
+    H --> I
+
+    %% Web form path (planned)
+    W1["Web registration form (planned)<br/>ID, name, email + notice link"] --> W2["Three separate checkboxes<br/>email, SMS, faculty and year<br/>all unticked by default"]
+    W2 --> W3["Submit<br/>ticked boxes use the same calls as the CLI"]
+    W3 --> I
+
+    %% Withdrawal path
+    I -.->|"later, any time"| P["My profile"]
+    P --> Q{"What to change?"}
+    Q -->|email reminders| R["setEmailReminders(false)"]
+    Q -->|SMS| S["withdrawSmsConsent()<br/>phone number erased"]
+    Q -->|faculty and year| T["Clear faculty and year"]
+    R --> U["Choice saved<br/>account still works"]
+    S --> U
+    T --> U
