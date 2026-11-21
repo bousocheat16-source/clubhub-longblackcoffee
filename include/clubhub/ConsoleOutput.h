@@ -1,5 +1,6 @@
 // include/clubhub/ConsoleOutput.h
-// SPDX-License-Identifier: Apache-2.0
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Team longblackcoffee, ITC Club Hub contributors
 #pragma once
 
 #include <string>

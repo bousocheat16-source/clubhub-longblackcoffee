@@ -1,5 +1,6 @@
 // src/ConsoleOutput.cpp
-// SPDX-License-Identifier: Apache-2.0
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Team longblackcoffee, ITC Club Hub contributors
 #include "clubhub/ConsoleOutput.h"
 
 #include <cstdlib>
