@@ -45,12 +45,70 @@ If "Recommended for you" is approved, the following decisions in `data-inventory
 | **4. Large clubs crowding out small clubs** | Small clubs (fewer than 20 members) are overshadowed by large clubs that run frequent or high-headcount events. | Limit recommendations to **at most 1 event per club** in a 5-item list and apply club-size balancing during ranking. | **Small-club exposure check:** Monthly check showing clubs with **fewer than 20 members** receive **at least 80% of their fair share** of recommendations relative to their share of events. |
 
 ## 4 Transparency
-"Why am I seeing this?" example: TODO
-## 5 Opt-out design
+
+### "Why am I seeing this?" example
+Displayed when a student clicks the **Why this event?** info icon next to a recommended event:
+
+> **Event:** `E-024 · Intro to Linux & Shell Scripting` (Open Source Club · 2026-11-28 17:30)
+>
+> **Why am I seeing this?**
+> - You attended 2 recent events tagged **Software & Tools** this semester.
+> - This event fills one of your **new-club discovery slots** (you have not attended an Open Source Club event yet).
+> - Registration is currently open and free on campus.
+>
+> *Not interested or want to turn off personalisation? Manage this anytime in **My Profile → Privacy & Preferences**.*
+
+### Ranking inputs (published by the Clubs Office)
+The Clubs Office can publish the following plain-language summary on the Club Hub help page:
+
+> **How "Recommended for you" works**
+> When you turn on personalised recommendations, Club Hub picks 5 upcoming events using four inputs:
+> 1. **Your club memberships:** Upcoming events from clubs you currently belong to.
+> 2. **Your recent attendance topics:** Event category tags (such as *Robotics*, *Design*, or *Sports*) from check-ins you completed while opted in.
+> 3. **Discovery & fairness balance:** At least 2 of the 5 slots are reserved for clubs you have not visited yet, with at most 1 event per club and a boost so smaller clubs are not crowded out.
+> 4. **Weekly campus activity:** Aggregate registration counts from the past 7 days (used only as a tie-breaker and for new students without history).
+>
+> **What we never use:** Your name, email, phone number, academic grades, or personal demographics are never used to rank events.
+
+---
+
+## 5 Opt-in and opt-out design
+
+### Default setting and justification
+- **Default:** **Opt-in (OFF by default).**
+- **Justification:** Consistent with our Lab-03 consent rules (`lab03/consent-flow.mmd`), optional data processing must never be pre-selected. Leaving personalisation OFF by default respects data minimisation and ensures no student's attendance history is profiled without clear agreement. Students who leave it OFF still receive the useful non-personalised baseline (*Events of my clubs* + *Popular this week*).
+
+### Where the switch lives
+- **Web / PWA:** `My Profile → Privacy & Preferences → Personalised event recommendations` (single toggle switch, OFF by default).
+- **CLI:** `clubhub prefs --recommendations on|off` (and an optional prompt defaulting to `no` during `clubhub register`).
+
+### What happens when a student switches it off
+1. **Immediate UI fallback:** Personalised ranking stops immediately; the student's home screen switches back to the non-personalised baseline (*Events of my clubs* + *Popular this week*).
+2. **Derived data deletion:** The student's `derivedInterestProfile` record is queued for deletion and permanently removed within **24 hours**.
+3. **Raw attendance untouched for core service:** Existing attendance records in `data/registrations.csv` are no longer read by the recommender and continue following the standard semester-end purge rule.
+4. **Confirmation:** The interface displays a plain-language confirmation stating that personalised recommendations are off and derived preference data is scheduled for deletion.
+
+### Opt-out flow
 ```mermaid
-flowchart TD
-  A["My profile: Recommendations switch"] --> B{"Switched off?"}
-```
+flowchart LR
+    A["My Profile: Privacy & Preferences<br/>(or CLI: clubhub prefs --recommendations off)"] --> B{"Recommendations<br/>switch"}
+    B -- "ON (explicit opt-in)" --> C["Build/update derivedInterestProfile<br/>from opted-in history"]
+    C --> D["Show 5 personalised events<br/>with 'Why am I seeing this?'"]
+    B -- "OFF (default or withdrawn)" --> E["Stop personalised ranking immediately"]
+    E --> F["Queue deletion of derivedInterestProfile<br/>(purged within 24 hours)"]
+    F --> G["Fall back to non-personalised baseline<br/>(My clubs + Popular this week)"]
+    G --> H["Show confirmation:<br/>'Personalisation off; profile data deleted'"]
+  ```
 ## 6 Recommendation
-Decision: GO / NO-GO / GO WITH CONDITIONS
-Conditions: TODO · Owner of the fairness check: TODO
+**Decision:** **GO WITH CONDITIONS** (Phase 1: ship the non-personalised baseline first; Phase 2: enable personalised recommendations only after all conditions below are met).
+
+### Conditions for release
+1. **Baseline-first validation:** Launch the non-personalised baseline (*Events of my clubs* + *Popular this week*) for one month first; only build the personalised recommender if students still report difficulty discovering relevant events.
+2. **Strict opt-in and 24-hour purge:** Keep recommendations **OFF by default**, update `lab03/data-inventory.md` and `lab03/retention-rules.md` to cover `derivedInterestProfile`, and verify automated deletion within 24 hours of opting out.
+3. **Privacy-safe logging:** Ensure all recommendation and audit logs use `Student::redacted()` and never output `name`, `email`, or `phone`.
+4. **Fairness guardrails in code:** Enforce all four bias mitigations (cold-start fallback, max 1 event per club, ≥ 2 unvisited-club slots, and no penalty for low attendance) with automated unit tests before launch.
+5. **Kill switch on fairness failure:** If any monthly fairness metric falls below its threshold (e.g., small-club exposure < 80% of fair share or unvisited-club share < 40%) for two consecutive months, automatically revert to the non-personalised baseline until fixed.
+
+### Ownership of the fairness check after release
+- **Primary Owner (Governance & Go/Pause Authority):** **Clubs Office Coordinator** (Product Owner), who reviews the monthly fairness report and decides whether the feature stays enabled or pauses.
+- **Technical Owner (Measurement & Fixes):** **ITC Club Hub Maintainer / Lead Developer**, who runs the automated monthly fairness check script on anonymised/aggregate logs and delivers ranking adjustments if any threshold is missed.

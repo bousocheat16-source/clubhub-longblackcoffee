@@ -1,4 +1,6 @@
 // src/Student.cpp
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Team longblackcoffee, ITC Club Hub contributors
 #include "clubhub/Student.h"
 
 #include <algorithm>
